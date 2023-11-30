@@ -1,0 +1,12 @@
+body{
+    color: firebrick;
+}
+nav a{
+    color: khaki;
+    text-decoration: none;
+    background-color: gray;
+}
+nav a:hover{
+    color: magenta;
+    text-transform: ;
+}
