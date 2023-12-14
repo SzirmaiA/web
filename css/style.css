@@ -8,7 +8,6 @@ nav a{
 }
 nav a:hover{
     color: magenta;
-    text-transform: ;
 }
 #footer{
     background-color: black;
@@ -16,6 +15,6 @@ nav a:hover{
     text-align: center;
 
 }
-div{
+#div1{
     color: black;
 }
