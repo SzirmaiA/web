@@ -9,12 +9,12 @@ nav a{
 nav a:hover{
     color: magenta;
 }
-#footer{
+footer{
     background-color: black;
     color: white;
     text-align: center;
 
 }
-#div1{
+div {
     color: black;
 }
