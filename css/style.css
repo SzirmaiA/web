@@ -19,4 +19,20 @@ div {
     color: black;
     background-color: black;
 }
+.box1
+.box2
+.box3{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: blue;
+}
+.box3{
+    background-color:   green;
+}
  
