@@ -22,7 +22,7 @@ div {
 .box1
 .box2
 .box3{
-    margin: 10px;
+    border: 1px solid;
     width: 100px;
     height: 100px;
 }
