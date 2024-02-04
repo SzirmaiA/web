@@ -40,22 +40,12 @@ div {
     height: 100px;
     clear: both;
 }
-.evszakok{
-    border: 10px solid pink;
-    clear: both;
-    display: table;
+.image-container{
+    display: flex; 
 }
-#e1{
-    float: left;
-    
-}
-#e2{
-    float: right;
-}
-#e3{
-    float: left;
-}
-#e4{
-    float: right;
-}
+.image-container img {
+    width: 100%;/
+    max-width: 100%; 
+    height: auto; 
+    margin-right: 10px;}
  
