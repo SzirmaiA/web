@@ -43,4 +43,16 @@ div {
 .evszakok{
     border: 10px solid pink;
 }
+#e1{
+    float: left;
+}
+#e2{
+    float: right;
+}
+#e3{
+    float: left;
+}
+#e4{
+    float: right;
+}
  
