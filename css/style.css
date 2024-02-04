@@ -42,11 +42,12 @@ div {
 }
 .evszakok{
     border: 10px solid pink;
+    clear: both;
+    display: table;
 }
 #e1{
     float: left;
-    width: 260px;
-    height: 260px;
+    
 }
 #e2{
     float: right;
