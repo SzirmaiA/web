@@ -45,12 +45,12 @@ div {
   }
   
   .image-wrapper {
-    flex: 1; /* Distribute the available space equally among all images */
-    margin-right: 10px; /* Adjust as needed for spacing between images */
+    flex: 1;
+    margin-right: 10px; 
   }
   
   .image-wrapper img {
-    width: 100%; /* Ensure images take up the full width of their container */
-    max-width: 100%; /* Ensure images don't exceed their natural size */
-    height: auto; /* Maintain the aspect ratio of the images */
+    width: 120px; 
+    max-width: 120px; 
+    height: auto; 
   }
