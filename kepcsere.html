@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 150px;
+            height: 220px;
+            object-fit: cover;
+            display: ;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/kepcserk.jpg" alt="kutya" id="kutya">
+    <img src="img/macskaka.jpg" alt="macska" id="macska">
+    <br>
+    <input type="button" value="kutya" onclick="kutya()">
+    <input type="button" value="macska" onclick="macska()">
+    <script>
+        function kutya()
+            document.getElementById("kutya").style.display = "block" 
+        function kutya()
+            document.getElementById("macska").style.display = "none" 
+    </script>
+</body>
+</html>
