@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>képcsere</title>
-    <style>
-        img{
-            width: 150px;
-            height: 220px;
-            object-fit: cover;
-            display: none;
-        }  
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kepcsere</title>
+<style>
+  #image-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
 </head>
 <body>
-    <img src="img/kepcserk.jpg" alt="kutya" id="kutya">
-    <img src="img/macskaka.jpg" alt="macska" id="macska">
-    <br>
-    <input type="button" value="kutya" onclick="kutya()">
-    <input type="button" value="macska" onclick="macska()">
-    <script>
-        function kutya()
-            document.getElementById("kutya").style.display = "block" 
-        function macska()
-            document.getElementById("macska").style.display = "none" 
-    </script>
+
+<button onclick="toggleImage(1)">kutya</button>
+<button onclick="toggleImage(2)">macska</button>
+
+<div id="image-container">
+  <img id="image1" src="img/kepcserk.jpg" style="display: none;" width="300" height="200">
+  <img id="image2" src="img/macskaka.jpg" style="display: none;" width="300" height="200">
+</div>
+
+<script>
+  var currentImage = 1;
+
+  function toggleImage(imageNumber) {
+    var image1 = document.getElementById('image1');
+    var image2 = document.getElementById('image2');
+
+    if (imageNumber === 1) {
+      if (currentImage === 2) {
+        image2.style.display = "none";
+        image1.style.display = "block";
+        currentImage = 1;
+      }
+    } else if (imageNumber === 2) {
+      if (currentImage === 1) {
+        image1.style.display = "none";
+        image2.style.display = "block";
+        currentImage = 2;
+      }
+    }
+  }
+</script>
+
 </body>
 </html>
