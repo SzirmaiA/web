@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jersey+15&display=swap');
+        .jersey-15-regular {
+        font-family: "Jersey 15", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+#result.green {
+            background-color: lightgreen;}
+            fieldset{
+                width: 270px;
+            }
+            #right{
+                float: right;
+            }
+
+    </style>
+</head>
+<body>
+    <h1 class="jersey-15-regular">Pitagorasz tétele</h1>
+    <img src="pitagorasz.png" alt="" class="col-md-6">
+    <div id="right
+    ">
+        <fieldset class="col-md-6">
+            <legend>Számóló gép</legend>
+            <form id="pitagorasz-form" class="col-md-6 col-lg-6 col-sm-6">
+                <label for="a">Egyik befogó hossz:</label>
+                <input type="number" id="a" name="a" step="0.01" required>
+                <br><br>
+                <label for="b">Másik befogó hossz:</label>
+                <input type="number" id="b" name="b" step="0.01" required>
+                <br><br>
+                <label for="c">Átfogó hossz:</label>
+                <input type="text" id="c" name="c" readonly>
+                <br><br>
+                <!-- Számítás gomb -->
+                <input type="submit" value="Számítás">
+                <!-- Részét gomb -->
+                <input type="reset" value="Részét">
+            </form>
+        </fieldset>
+    </div>
+
+    <p class="jersey-15-regular">ármely derékszögű háromszög leghosszabb oldalának (átfogójának) négyzete megegyezik a másik két oldal (a befogók) négyzetösszegével. Tehát: ha egy háromszög derékszögű, akkor a leghosszabb oldalára emelt négyzet területe a másik két oldalra emelt négyzetek területének összegével egyenlő.</p>
+    <script>
+        // Pitagorasz-tétel kiszámítása
+        function pitagoraszTetel(a, b) {
+            return Math.sqrt(a * a + b * b);
+        }
+
+        // Az űrlap eseménykezelője
+        document.getElementById('pitagorasz-form').addEventListener('submit', function(event) {
+            // Megakadályozza az űrlap alapértelmezett elküldését
+            event.preventDefault();
+
+            // Az input mezők értékeinek lekérése
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+
+            // Az átfogó kiszámítása
+            const atfogo = pitagoraszTetel(a, b);
+
+            // Az eredmény megjelenítése az átfogó mezőben
+            const cElement = document.getElementById('c');
+            cElement.value = atfogo.toFixed(2);
+
+            // Az átfogó mező zöld színűre váltása
+            cElement.classList.add('green');
+        });</script>
+</body>
+</html>
