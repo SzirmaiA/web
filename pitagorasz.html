@@ -40,38 +40,30 @@
                 <label for="c">utolsó oldal</label>
                 <input type="text" id="c" name="c" readonly>
                 <br><br>
-                <!-- Számítás gomb -->
                 <input type="submit" value="Számítás">
-                <!-- Részét gomb -->
-                <input type="reset" value="Részét">
+                <input type="reset" value="reset">
             </form>
         </fieldset>
     </div>
 
-    <p class="jersey-15-regular">ármely derékszögű háromszög leghosszabb oldalának (átfogójának) négyzete megegyezik a másik két oldal (a befogók) négyzetösszegével. Tehát: ha egy háromszög derékszögű, akkor a leghosszabb oldalára emelt négyzet területe a másik két oldalra emelt négyzetek területének összegével egyenlő.</p>
+    <p class="jersey-15-regular">Tétel faszság: akármely derékszögű háromszög leghosszabb oldalának (átfogójának) négyzete megegyezik a másik két oldal (a befogók) négyzetösszegével. Tehát: ha egy háromszög derékszögű, akkor a leghosszabb oldalára emelt négyzet területe a másik két oldalra emelt négyzetek területének összegével egyenlő.</p>
     <script>
-        // Pitagorasz-tétel kiszámítása
+       
         function pitagoraszTetel(a, b) {
             return Math.sqrt(a * a + b * b);
         }
 
-        // Az űrlap eseménykezelője
         document.getElementById('pitagorasz-form').addEventListener('submit', function(event) {
-            // Megakadályozza az űrlap alapértelmezett elküldését
             event.preventDefault();
 
-            // Az input mezők értékeinek lekérése
             const a = parseFloat(document.getElementById('a').value);
             const b = parseFloat(document.getElementById('b').value);
 
-            // Az átfogó kiszámítása
             const atfogo = pitagoraszTetel(a, b);
 
-            // Az eredmény megjelenítése az átfogó mezőben
             const cElement = document.getElementById('c');
             cElement.value = atfogo.toFixed(2);
-
-            // Az átfogó mező zöld színűre váltása
+            
             cElement.classList.add('green');
         });</script>
 </body>
