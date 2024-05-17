@@ -1,0 +1,32 @@
+!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="margin: auto;">
+        <form action="javascript:OK()">
+            <input type="email" required name="adat" id="mail" placeholder="email"><br>
+            <input type="text" required name="adat" id="nev" placeholder="Név"><br>
+            <input type="checkbox" name="adat" id="aszf" > Á.SZ.F elfogadása <br>
+            <input type="checkbox" name="adat" id="hirlevel"> hírlevélre Feliratkozás <br>
+            <input type="submit" name="submit" id="feliratkozas" value="Feliratkozás" placeholder="Feliratkozás" > <br>
+    </fieldset>
+        
+    </form>
+    <script>
+       function OK() {
+        if (aszf.checked) {
+            localStorage.setItem("mail", id.value);
+        }
+        else{
+            alert("FOGADD EEEEEELLL");
+        }
+
+       }
+
+    </script>
+</body>
+</html>
